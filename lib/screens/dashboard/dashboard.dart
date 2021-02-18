@@ -12,7 +12,7 @@ class Dashboard extends StatelessWidget {
         ),
         body: Align(
           alignment: Alignment.topCenter,
-          child: SaldoCard(Saldo(10.00)),
+          child: SaldoCard(),
         ));
   }
 }
