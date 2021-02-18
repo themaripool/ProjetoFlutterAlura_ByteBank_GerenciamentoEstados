@@ -2,6 +2,7 @@ import 'package:bytebank/models/saldo.dart';
 import 'package:bytebank/screens/dashboard/saldo.dart';
 import 'package:bytebank/screens/deposito/formularioDeposito.dart';
 import 'package:bytebank/screens/transferencia/formulario.dart';
+import 'package:bytebank/screens/transferencia/lista.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -40,7 +41,16 @@ class Dashboard extends StatelessWidget {
                     }));
                   })
             ],
-          )
+          ),
+          RaisedButton(
+                  child: Text('Transferencias'),
+                  onPressed: () {
+                    //saldo.adiciona(10);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return ListaTransferencias();
+                    }));
+                  })
         ]));
   }
 }
